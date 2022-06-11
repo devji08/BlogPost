@@ -11,8 +11,9 @@ const express = require('express'),
   validationMiddleware = require("./middleware/postValidation"),
   authMiddleware = require('./middleware/auth'),
   redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticated'),
-  app = express(),
-  port = process.env.PORT;
+  app = express();
+
+let port = process.env.PORT;
 
 if (port == null || port == '') {
   port = 3000;
